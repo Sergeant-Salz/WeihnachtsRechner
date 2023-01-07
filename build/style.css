@@ -4,27 +4,28 @@
   font-size: 1em;
 }
 
-#merry {
+#merry, #merry_wrapper h1{
     color: hsl(352, 100%, 45%);
     text-align: center;
-    grid-row: 1/4;
-    grid-column: 1/4;
     align-self: center;
-    justify-self: center;
+/*    grid-row: 1/4;*/
+/*    grid-column: 1/4;*/
+/*    justify-self: center;*/
     font-family: "Titillium Web";
     font-size: 2rem;
     font-weight: bold;
 }
 
-#merry h1 {
-  font-family: "Mountains of Christmas";
-  font-size: 5rem;
-  text-align: center;
+#merry_wrapper h1 {
+    font-family: "Mountains of Christmas";
+    font-size: 5rem;
+    text-align: center;
+
+/*  display:none;*/
 }
 
 form {
-  padding: 1rem 2rem;
-  min-width: 40%;
+  padding: 1rem 3rem;
   z-index: 200;
 }
 
@@ -52,8 +53,9 @@ body {
 .wrapper {
     display:flex;
     flex-direction: column;
-    background-color: hsl(175, 45%, 85%);
+    background-color: lightblue;
     border-radius: .5rem;
+    min-width: 100vw;
 
 }
 
@@ -64,14 +66,23 @@ body {
     margin-right: 5%;
 }
 
+#merry_wrapper {
+    min-width: 40%;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
 #canvas_wrapper {
     min-width: 256px;
     min-height: 512px;
+
+    margin-top: -4%;
 }
 
 /* ----Desktop----*/
 @media screen and (min-width: 960px) {
     .wrapper {
         flex-direction: row;
+        min-width: 80vw;
     }
 }

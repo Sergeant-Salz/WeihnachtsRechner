@@ -105,7 +105,16 @@ function vectorOnCurve( time, p1, p2, p3 ) {
     setInterval( _ => {
         _seed = new Date().getTime();
         resize();
-        }, 1000 );
+
+        //set string
+        let string = _messages[ _message ];
+        _message++;
+        if ( _message > _messages.length - 1 ) _message = 0;
+
+        document.getElementsByTagName('h1')[0].innerText = string;
+
+
+        }, 3000 );
 
 })();
 
@@ -148,7 +157,7 @@ function render() {
     drawBaubels();
     drawNeedles( 0.125 );
     drawStar();
-    drawMessage();
+//    drawMessage();
 }
 
 function setColors() {
@@ -162,7 +171,7 @@ function setColors() {
     let nh = range( random(), 0, 1, 90, 175 );
     let ns = range( random(), 0, 1, 15, 45 );
     let nl = range( random(), 0, 1, 25, 42 );
-    _color.needle = `hsla(${nh},${ns}%,${nl}%,0.6)`;
+    _color.needle = `hsla(${nh},${ns}%,${nl}%,0.7)`;
 
     let bh = range( random(), 0, 1, -90, 90 );
     let bs = range( random(), 0, 1, 45, 55 );
@@ -486,7 +495,7 @@ function drawStar() {
 function drawMessage() {
     let size = range( _width, 600 * 2, 1400 * 2, 95, 120 );
 
-    _c.globalCompositeOperation = 'multiply';
+    _c.globalCompositeOperation = 'source-over';
     _c.fillStyle = 'hsl(352, 100%, 45%)';
     _c.textAlign = 'center';
     _c.font = `normal 900 ${size}px "Playfair Display SC", Serif`;
