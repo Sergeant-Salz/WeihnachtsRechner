@@ -106,12 +106,12 @@ function vectorOnCurve( time, p1, p2, p3 ) {
         _seed = new Date().getTime();
         resize();
 
-        //set string
-        let string = _messages[ _message ];
-        _message++;
-        if ( _message > _messages.length - 1 ) _message = 0;
-
-        document.getElementsByTagName('h1')[0].innerText = string;
+//        //set string
+//        let string = _messages[ _message ];
+//        _message++;
+//        if ( _message > _messages.length - 1 ) _message = 0;
+//
+//        document.getElementsByTagName('h1')[0].innerText = string;
 
 
         }, 3000 );
