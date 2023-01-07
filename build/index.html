@@ -9,10 +9,14 @@
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div id="particles-js" class="snow"></div>
-	<div class="trees">
-			<form  class="merry">
+    <div class='wrapper'>
+        <div id='canvas_wrapper'>
+            <canvas id='christmas_tree'>
+
+            </canvas>
+        </div>
+        <div id='merry_wrapper'>
+            <form  id="merry">
 				<h1>Merry Christmas</h1>
 				<br>
 				<!--<input type=number id="value" value=2020>-->
@@ -22,15 +26,8 @@
 					<div>300. <span id="W300"></span></div>
 				</div>
 			</form>
-	<div class="fox">
-		<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/25839/critters.svg" width="300px">
-	</div>
-	<div class="tree">
-		<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/25839/tree.svg" width="200px">
-	</div>
-</div>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.js'></script><script  src="./script.js"></script>
-
+        </div>
+    </div>
+    <script  src='./script.js'></script>
 </body>
 </html>
